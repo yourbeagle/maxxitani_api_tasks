@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, orm
+from sqlalchemy import Column, Integer, String, ForeignKey
 from database import Base
 
 class Pegawai(Base):

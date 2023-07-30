@@ -135,7 +135,7 @@ async def updateDivisi(id:int, db:database_dependency, divisi: DivisiBase):
     if update_divisi:
         update_divisi.nama_divisi = divisi.nama_divisi
         db.commit()
-        db.refresh(update)
+        db.refresh(update_divisi)
         return {
             "message" : "Update Data Divisi Success",
             "data": update_divisi
@@ -149,7 +149,7 @@ async def deleteDivisi(id:int, db:database_dependency):
     delete_divisi = db.query(models.Divisi).filter(models.Divisi.id == id).first()
     if delete_divisi is None:
         raise HTTPException(status_code=404, detail="Data Divisi Tidak Ditemukan")
-    db.delete(delete_pegawai)
+    db.delete(delete_divisi)
     db.commit()
     return {
         "message" : "Berhasil Hapus Data Divisi"
