@@ -107,7 +107,6 @@ async def deletePegawai(id:int, db:database_dependency):
         "message" : "Berhasil Hapus Data Pegawai"
     }
     
-
 @app.get("/divisi/", status_code= status.HTTP_200_OK)
 async def listDivisi(db : database_dependency):
     get_all_divisi = db.query(models.Divisi).all()
