@@ -19,7 +19,7 @@ https://maxxitani_real-1-x3301871.deta.app/
 | Method | Endpoint | Description |
 |:------:|:--------:|-------------|
 |GET|`/divisi`|untuk menampilkan seluruh data divisi|
-|PUT|`/pegawai/{id}`|untuk merubah data divisi|
+|PUT|`/divisi/{id}`|untuk merubah data divisi|
 |POST|`/divisi `|untuk menambah data divisi|
 |DELETE|`/divisi/{id} `|untuk menghapus data divisi|
 
