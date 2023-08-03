@@ -87,7 +87,7 @@ async def updatePegawai(id:int, db:database_dependency, pegawai: PegawaiBase):
         update_pegawai.alamat = pegawai.alamat
         update_pegawai.divisi_id = pegawai.divisi_id
         db.commit()
-        db.refresh(update)
+        db.refresh(update_pegawai)
         return {
             "message" : "Update Data Pegawai Success",
             "data": update_pegawai
